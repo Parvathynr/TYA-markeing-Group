@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./quote.css";
+import "./Quote.css";
 import map from "../../assets/map.png";
 import { handleQuoteRequest } from "../../utils/Whatsapp";
 
