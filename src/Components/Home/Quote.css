@@ -1,0 +1,127 @@
+
+
+.map-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* padding: 60px 10%; */
+  padding: 40px 10% 20px 10%; /* Top 40px, Bottom 20px */
+  gap: 60px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Left Section */
+.quote-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.quote-left h2 {
+  font-size: 32px;
+  color: #003f5c;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.quote-left p {
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+
+.map-image {
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px 0 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Read More Button */
+.read-button {
+  background: #009688;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.read-button:hover {
+  background: #e17f46;
+}
+
+/* Right Section */
+.quote-right {
+  flex: 1;
+  max-width: 50%;
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.quote-right h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #003f5c;
+  margin-bottom: 20px;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.quote-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Quote Submit Button */
+.quote-button {
+  background: #009688;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-button:hover {
+  background: #e17f46;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .quote-left, .quote-right {
+    max-width: 100%;
+  }
+}

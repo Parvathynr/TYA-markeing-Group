@@ -1,0 +1,98 @@
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* responsive columns */
+  gap: 20px; /* space between items */
+  justify-items: center; /* centers items within their grid cell */
+  padding: 20px;
+}
+
+/* product card */
+.item-box {
+  overflow: hidden;
+  width: 250px; /* fixed width for each card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.item-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.4rem;
+  padding: 10px;
+}
+
+.know-more-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sort-box {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.sort-box select {
+  appearance: none; /* removes default browser styling */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 32px 8px 16px; /* space on right for arrow */
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sort-box select:hover {
+  border-color: #aaa;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.sort-box select:focus {
+  border-color: #0077b6; /* accent color */
+  box-shadow: 0px 0px 0px 3px rgba(0, 119, 182, 0.15);
+}
+
+.sort-box::after {
+  content: "▼";
+  font-size: 12px;
+  color: #00bfa6;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
